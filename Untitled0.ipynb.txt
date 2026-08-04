@@ -1,0 +1,718 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "ir",
+      "display_name": "R"
+    },
+    "language_info": {
+      "name": "R"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [
+        "My First R Program"
+      ],
+      "metadata": {
+        "id": "lidLv8LPg1js"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1.Print"
+      ],
+      "metadata": {
+        "id": "1P5MGfIHhEgw"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Rt9RFVbBenGI",
+        "outputId": "0752958a-43e4-4646-c593-ae306351da32"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1] \"I love AI\"\n",
+            "\n",
+            "R Program"
+          ]
+        }
+      ],
+      "source": [
+        "print(\"I love AI\")\n",
+        "\n",
+        "cat (\"R\", \"Program\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "2.Variables & Data Types"
+      ],
+      "metadata": {
+        "id": "2dc1VGnZjbrB"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "myString <- \"I love Programming\"\n",
+        "wholeNum <- 10\n",
+        "floatingNum <- 9.9\n",
+        "isBool <- TRUE\n",
+        "\n",
+        "print (wholeNum)\n",
+        "\n",
+        "class(myString)\n",
+        "class(wholeNum)\n",
+        "class(floatingNum)\n",
+        "class(isBool)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 104
+        },
+        "id": "s3QdEoCwjs4N",
+        "outputId": "3153a895-7d53-4c61-943c-6492d8041de9"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1] 10\n"
+          ]
+        },
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/html": [
+              "'character'"
+            ],
+            "text/markdown": "'character'",
+            "text/latex": "'character'",
+            "text/plain": [
+              "[1] \"character\""
+            ]
+          },
+          "metadata": {}
+        },
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/html": [
+              "'numeric'"
+            ],
+            "text/markdown": "'numeric'",
+            "text/latex": "'numeric'",
+            "text/plain": [
+              "[1] \"numeric\""
+            ]
+          },
+          "metadata": {}
+        },
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/html": [
+              "'numeric'"
+            ],
+            "text/markdown": "'numeric'",
+            "text/latex": "'numeric'",
+            "text/plain": [
+              "[1] \"numeric\""
+            ]
+          },
+          "metadata": {}
+        },
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/html": [
+              "'logical'"
+            ],
+            "text/markdown": "'logical'",
+            "text/latex": "'logical'",
+            "text/plain": [
+              "[1] \"logical\""
+            ]
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "3.Numerical Operators"
+      ],
+      "metadata": {
+        "id": "-hpvx6P5ktaS"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x <- 10\n",
+        "y <- 3\n",
+        "\n",
+        "add <- x + y\n",
+        "sub <- x - y\n",
+        "mul <- x * y\n",
+        "div <- x / y\n",
+        "mod <- x %% y\n",
+        "exp <- x ^ y\n",
+        "\n",
+        "print(add)\n",
+        "print(sub)\n",
+        "print(mul)\n",
+        "print(div)\n",
+        "print(mod)\n",
+        "print(exp)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0O4YBNi3lFpR",
+        "outputId": "2f7e8f78-9e2b-46e7-e097-e0d8a51affd1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1] 13\n",
+            "[1] 7\n",
+            "[1] 30\n",
+            "[1] 3.333333\n",
+            "[1] 1\n",
+            "[1] 1000\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "4.User Input"
+      ],
+      "metadata": {
+        "id": "AJ3vOkoPoXsM"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "name <- readline(\"Enter name: \")\n",
+        "\n",
+        "cat(\"Welcome to R Programming: \" , name)\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_GsB1tE-oesc",
+        "outputId": "9d52d6b1-e879-439c-d34f-64e95397b82a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter name: Gilly Marie\n",
+            "Welcome to R Programming:  Gilly Marie"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "5.Decision Making"
+      ],
+      "metadata": {
+        "id": "KfhX7gPnp1n0"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "grade <- 88\n",
+        "\n",
+        "if (grade < 75) {\n",
+        "  print (\"Failed\")\n",
+        "}else{\n",
+        "  print (\"Passed\")\n",
+        "}"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LIytj0xfqMq-",
+        "outputId": "ec582cbe-6282-44be-b214-7f03ba7e0a7c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1] \"Passed\"\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "6.Loop"
+      ],
+      "metadata": {
+        "id": "G23wXU32qxk7"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for(i in 1:5){\n",
+        "  print(i)\n",
+        "}"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sH4I3kY1qIsu",
+        "outputId": "a27ac88c-e313-4350-b45d-2860a82285c5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1] 1\n",
+            "[1] 2\n",
+            "[1] 3\n",
+            "[1] 4\n",
+            "[1] 5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "7.Function"
+      ],
+      "metadata": {
+        "id": "bBjg5veksO2g"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "addNumber <- function(a,b){\n",
+        "  return (a+b)\n",
+        "}\n",
+        "\n",
+        "addNumber(3,7)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "id": "a1TNNUUisUy-",
+        "outputId": "3aabcf0d-7de0-4125-e187-50ed51fa3c8b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/html": [
+              "10"
+            ],
+            "text/markdown": "10",
+            "text/latex": "10",
+            "text/plain": [
+              "[1] 10"
+            ]
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.Vector"
+      ],
+      "metadata": {
+        "id": "N5wL2Q16si44"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "grades <- c(98,80,91,96)\n",
+        "\n",
+        "grades\n",
+        "\n",
+        "cat(\"MEAN: \",mean(grades))\n",
+        "cat(\"\\nMAX: \",max(grades))\n",
+        "cat(\"\\nMIN: \",min(grades))\n",
+        "cat(\"\\nLENGTH: \",length(grades))\n",
+        "cat(\"\\nMEADIAN: \",median(grades))\n",
+        "summary(grades)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 156
+        },
+        "id": "xiwIJv5otex_",
+        "outputId": "d361a4de-5914-444b-d8e9-30657c8450a8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/html": [
+              "<style>\n",
+              ".list-inline {list-style: none; margin:0; padding: 0}\n",
+              ".list-inline>li {display: inline-block}\n",
+              ".list-inline>li:not(:last-child)::after {content: \"\\00b7\"; padding: 0 .5ex}\n",
+              "</style>\n",
+              "<ol class=list-inline><li>98</li><li>80</li><li>91</li><li>96</li></ol>\n"
+            ],
+            "text/markdown": "1. 98\n2. 80\n3. 91\n4. 96\n\n\n",
+            "text/latex": "\\begin{enumerate*}\n\\item 98\n\\item 80\n\\item 91\n\\item 96\n\\end{enumerate*}\n",
+            "text/plain": [
+              "[1] 98 80 91 96"
+            ]
+          },
+          "metadata": {}
+        },
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "MEAN:  91.25\n",
+            "MAX:  98\n",
+            "MIN:  80\n",
+            "LENGTH:  4\n",
+            "MEADIAN:  93.5"
+          ]
+        },
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/plain": [
+              "   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n",
+              "  80.00   88.25   93.50   91.25   96.50   98.00 "
+            ]
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "9. Matrices"
+      ],
+      "metadata": {
+        "id": "H0t8QSdCu8qL"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "A <- matrix(c(1,2,3,4,5,6),nrow=2)\n",
+        "A"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 132
+        },
+        "id": "Mns4ZXYIvBJZ",
+        "outputId": "b36bd2d2-a7d8-41e9-aed3-376fa219c05f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/html": [
+              "<table class=\"dataframe\">\n",
+              "<caption>A matrix: 2 × 3 of type dbl</caption>\n",
+              "<tbody>\n",
+              "\t<tr><td>1</td><td>3</td><td>5</td></tr>\n",
+              "\t<tr><td>2</td><td>4</td><td>6</td></tr>\n",
+              "</tbody>\n",
+              "</table>\n"
+            ],
+            "text/markdown": "\nA matrix: 2 × 3 of type dbl\n\n| 1 | 3 | 5 |\n| 2 | 4 | 6 |\n\n",
+            "text/latex": "A matrix: 2 × 3 of type dbl\n\\begin{tabular}{lll}\n\t 1 & 3 & 5\\\\\n\t 2 & 4 & 6\\\\\n\\end{tabular}\n",
+            "text/plain": [
+              "     [,1] [,2] [,3]\n",
+              "[1,] 1    3    5   \n",
+              "[2,] 2    4    6   "
+            ]
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "10.Lists"
+      ],
+      "metadata": {
+        "id": "OwsNin4xvXf0"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "students <- list(\n",
+        "  name = \"Gilly Marie\",\n",
+        "  course =\"BSCS\",\n",
+        "  grade = 80\n",
+        ")\n",
+        "\n",
+        "students"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 149
+        },
+        "id": "4Ln0VUhfvepD",
+        "outputId": "cf7b802e-bd54-4231-ab8a-76c7a918a836"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/html": [
+              "<dl>\n",
+              "\t<dt>$name</dt>\n",
+              "\t\t<dd>'Gilly Marie'</dd>\n",
+              "\t<dt>$course</dt>\n",
+              "\t\t<dd>'BSCS'</dd>\n",
+              "\t<dt>$grade</dt>\n",
+              "\t\t<dd>80</dd>\n",
+              "</dl>\n"
+            ],
+            "text/markdown": "$name\n:   'Gilly Marie'\n$course\n:   'BSCS'\n$grade\n:   80\n\n\n",
+            "text/latex": "\\begin{description}\n\\item[\\$name] 'Gilly Marie'\n\\item[\\$course] 'BSCS'\n\\item[\\$grade] 80\n\\end{description}\n",
+            "text/plain": [
+              "$name\n",
+              "[1] \"Gilly Marie\"\n",
+              "\n",
+              "$course\n",
+              "[1] \"BSCS\"\n",
+              "\n",
+              "$grade\n",
+              "[1] 80\n"
+            ]
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "11.Dataframe"
+      ],
+      "metadata": {
+        "id": "O8ixsAsgwBvw"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "students <- data.frame(\n",
+        "  name = c(\"Gilly\", \"Vincee\", \"Ann\"),\n",
+        "  course = c(\"BSCS\", \"BSIT\", \"BSOA\"),\n",
+        "  grade = c(80,88,75)\n",
+        "\n",
+        ")\n",
+        "\n",
+        "students"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 192
+        },
+        "id": "BMaE-bn3xF-t",
+        "outputId": "aa7dfc30-d6d2-4732-e754-ae28c1ebeb26"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/html": [
+              "<table class=\"dataframe\">\n",
+              "<caption>A data.frame: 3 × 3</caption>\n",
+              "<thead>\n",
+              "\t<tr><th scope=col>name</th><th scope=col>course</th><th scope=col>grade</th></tr>\n",
+              "\t<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>\n",
+              "</thead>\n",
+              "<tbody>\n",
+              "\t<tr><td>Gilly </td><td>BSCS</td><td>80</td></tr>\n",
+              "\t<tr><td>Vincee</td><td>BSIT</td><td>88</td></tr>\n",
+              "\t<tr><td>Ann   </td><td>BSOA</td><td>75</td></tr>\n",
+              "</tbody>\n",
+              "</table>\n"
+            ],
+            "text/markdown": "\nA data.frame: 3 × 3\n\n| name &lt;chr&gt; | course &lt;chr&gt; | grade &lt;dbl&gt; |\n|---|---|---|\n| Gilly  | BSCS | 80 |\n| Vincee | BSIT | 88 |\n| Ann    | BSOA | 75 |\n\n",
+            "text/latex": "A data.frame: 3 × 3\n\\begin{tabular}{lll}\n name & course & grade\\\\\n <chr> & <chr> & <dbl>\\\\\n\\hline\n\t Gilly  & BSCS & 80\\\\\n\t Vincee & BSIT & 88\\\\\n\t Ann    & BSOA & 75\\\\\n\\end{tabular}\n",
+            "text/plain": [
+              "  name   course grade\n",
+              "1 Gilly  BSCS   80   \n",
+              "2 Vincee BSIT   88   \n",
+              "3 Ann    BSOA   75   "
+            ]
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "12.Write to CSV"
+      ],
+      "metadata": {
+        "id": "cIypzkAFxwvw"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#save dataframe to csv file\n",
+        "\n",
+        "write.csv(students, \"students.csv\")\n"
+      ],
+      "metadata": {
+        "id": "pSq7LZcVx_Uw"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "13.Read CSV File"
+      ],
+      "metadata": {
+        "id": "p4OR6R0pyyGU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "data <- read.csv(\"students.csv\")\n",
+        "\n",
+        "head(data)\n",
+        "summary(data)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 314
+        },
+        "id": "YtvQ1fp4zKl8",
+        "outputId": "1dbbb211-a87c-4e44-e399-2e2337a4146c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/html": [
+              "<table class=\"dataframe\">\n",
+              "<caption>A data.frame: 3 × 4</caption>\n",
+              "<thead>\n",
+              "\t<tr><th></th><th scope=col>X</th><th scope=col>name</th><th scope=col>course</th><th scope=col>grade</th></tr>\n",
+              "\t<tr><th></th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th></tr>\n",
+              "</thead>\n",
+              "<tbody>\n",
+              "\t<tr><th scope=row>1</th><td>1</td><td>Gilly </td><td>BSCS</td><td>80</td></tr>\n",
+              "\t<tr><th scope=row>2</th><td>2</td><td>Vincee</td><td>BSIT</td><td>88</td></tr>\n",
+              "\t<tr><th scope=row>3</th><td>3</td><td>Ann   </td><td>BSOA</td><td>75</td></tr>\n",
+              "</tbody>\n",
+              "</table>\n"
+            ],
+            "text/markdown": "\nA data.frame: 3 × 4\n\n| <!--/--> | X &lt;int&gt; | name &lt;chr&gt; | course &lt;chr&gt; | grade &lt;int&gt; |\n|---|---|---|---|---|\n| 1 | 1 | Gilly  | BSCS | 80 |\n| 2 | 2 | Vincee | BSIT | 88 |\n| 3 | 3 | Ann    | BSOA | 75 |\n\n",
+            "text/latex": "A data.frame: 3 × 4\n\\begin{tabular}{r|llll}\n  & X & name & course & grade\\\\\n  & <int> & <chr> & <chr> & <int>\\\\\n\\hline\n\t1 & 1 & Gilly  & BSCS & 80\\\\\n\t2 & 2 & Vincee & BSIT & 88\\\\\n\t3 & 3 & Ann    & BSOA & 75\\\\\n\\end{tabular}\n",
+            "text/plain": [
+              "  X name   course grade\n",
+              "1 1 Gilly  BSCS   80   \n",
+              "2 2 Vincee BSIT   88   \n",
+              "3 3 Ann    BSOA   75   "
+            ]
+          },
+          "metadata": {}
+        },
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/plain": [
+              "       X              name         course      grade     \n",
+              " Min.   :1.0   Length   :3   Length   :3   Min.   :75.0  \n",
+              " 1st Qu.:1.5   N.unique :3   N.unique :3   1st Qu.:77.5  \n",
+              " Median :2.0   N.blank  :0   N.blank  :0   Median :80.0  \n",
+              " Mean   :2.0   Min.nchar:3   Min.nchar:4   Mean   :81.0  \n",
+              " 3rd Qu.:2.5   Max.nchar:6   Max.nchar:4   3rd Qu.:84.0  \n",
+              " Max.   :3.0                               Max.   :88.0  "
+            ]
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "14."
+      ],
+      "metadata": {
+        "id": "k4x89e4azUq-"
+      }
+    }
+  ]
+}
